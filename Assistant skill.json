@@ -1,0 +1,803 @@
+{
+  "intents": [
+    {
+      "intent": "device_info",
+      "examples": [
+        {
+          "text": "How to turn on wi-fi?"
+        },
+        {
+          "text": "How to change the mobile hotspot password?"
+        },
+        {
+          "text": "How to message?"
+        },
+        {
+          "text": "How do I add a contact?"
+        },
+        {
+          "text": "How to add an alarm?"
+        },
+        {
+          "text": "How to access the internet?"
+        },
+        {
+          "text": "How do I make a call?"
+        },
+        {
+          "text": "How do I record a video?"
+        },
+        {
+          "text": "How do I take a picture?"
+        }
+      ],
+      "description": "When customer asks questions regarding the operation of the device"
+    },
+    {
+      "intent": "store_info",
+      "examples": [
+        {
+          "text": "Who is the founder of Samsung?"
+        },
+        {
+          "text": "When was Samsung founded?"
+        },
+        {
+          "text": "In how many countries does Samsung operate?"
+        },
+        {
+          "text": "Where was Samsung founded?"
+        },
+        {
+          "text": "What products does Samsung have?"
+        }
+      ],
+      "description": "When customer asks questions related to the store"
+    },
+    {
+      "intent": "cancel_an_order",
+      "examples": [
+        {
+          "text": "How to cancel an order?"
+        },
+        {
+          "text": "I don't want my order"
+        },
+        {
+          "text": "I don't want the mobile"
+        },
+        {
+          "text": "That order I placed please cancel it"
+        },
+        {
+          "text": "There's been a change. I need you to cancel my order please"
+        },
+        {
+          "text": "Can I cancel my order?"
+        },
+        {
+          "text": "Cancel my order"
+        },
+        {
+          "text": "Cancel order"
+        }
+      ],
+      "description": "When customer intends to cancel the order"
+    },
+    {
+      "intent": "place_an_order",
+      "examples": [
+        {
+          "text": "I wish to buy a smartphone"
+        },
+        {
+          "text": "I want to buy a phone"
+        },
+        {
+          "text": "I want to order a mobile phone"
+        },
+        {
+          "text": "order"
+        },
+        {
+          "text": "Buy a phone"
+        },
+        {
+          "text": "I want a mobile phone"
+        }
+      ],
+      "description": "When customer intends to place an order"
+    },
+    {
+      "intent": "yes",
+      "examples": [
+        {
+          "text": "Yes"
+        },
+        {
+          "text": "Yeah"
+        },
+        {
+          "text": "Yes please"
+        },
+        {
+          "text": "Yup"
+        },
+        {
+          "text": "Ya"
+        },
+        {
+          "text": "Yes, I would like to do that"
+        },
+        {
+          "text": "That's right"
+        },
+        {
+          "text": "That's correct"
+        },
+        {
+          "text": "Right"
+        },
+        {
+          "text": "Correct"
+        }
+      ],
+      "description": "When the user agrees to the question asked by the bot"
+    },
+    {
+      "intent": "bye",
+      "examples": [
+        {
+          "text": "Thanks"
+        },
+        {
+          "text": "Bye"
+        },
+        {
+          "text": "Goodbye"
+        },
+        {
+          "text": "Thank you"
+        },
+        {
+          "text": "See you later"
+        },
+        {
+          "text": "Thanks for responding"
+        },
+        {
+          "text": "See ya"
+        }
+      ],
+      "description": "When user wishes to end the conversation"
+    }
+  ],
+  "entities": [
+    {
+      "entity": "order_number",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "order_format",
+          "patterns": [
+            "[A-Z]{3}\\d{6}"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "price_range",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Expensive",
+          "synonyms": [
+            "pricey",
+            "costly",
+            "exorbitant",
+            "pricy",
+            "pricier",
+            "overpriced",
+            "spendy",
+            "exhorbitant",
+            "costlier",
+            "overprice",
+            "priciest",
+            "splurge",
+            "priced"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Cheap",
+          "synonyms": [
+            "inexpensive",
+            "cheapest",
+            "affordable",
+            "discount",
+            "low",
+            "discounted",
+            "lowest",
+            "lower",
+            "cheaply",
+            "affordability",
+            "cheaper",
+            "economical",
+            "reasonable",
+            "discounts",
+            "reasonably",
+            "affordably",
+            "lowering",
+            "inexpensively"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Moderate",
+          "synonyms": [
+            "moderately",
+            "medium",
+            "middle"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good morning",
+          "synonyms": [
+            "gud mrng",
+            "gm",
+            "morning",
+            "mornin"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hi",
+          "synonyms": [
+            "hello",
+            "hey",
+            "hiya",
+            "howdy",
+            "hola",
+            "hallo",
+            "heya"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good afternoon",
+          "synonyms": [
+            "ga",
+            "gud aftrnoon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good evening",
+          "synonyms": [
+            "ge",
+            "gud evng"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "webhooks": [
+    {
+      "url": "https://eu-gb.functions.cloud.ibm.com/api/v1/web/si05202000246%40smartinternz.com_dev/default/assistant%20function.json",
+      "name": "main_webhook",
+      "headers": []
+    }
+  ],
+  "dialog_nodes": [
+    {
+      "type": "slot",
+      "output": {},
+      "parent": "node_3_1591624467794",
+      "variable": "$order_number",
+      "dialog_node": "slot_8_1591717287762",
+      "previous_sibling": "node_10_1591722423692"
+    },
+    {
+      "type": "standard",
+      "title": "Cancelling the order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok. The order $order_number is canceled. We hope you shop with us sometime soon."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1591624467794",
+      "conditions": "#yes",
+      "dialog_node": "node_10_1591722423692"
+    },
+    {
+      "type": "standard",
+      "title": "Showing phones",
+      "parent": "node_2_1591621787064",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@price_range",
+      "dialog_node": "node_3_1591621864840"
+    },
+    {
+      "type": "standard",
+      "title": "Confirmation",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Just to confirm, you want to cancel order $order_number?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_5_1591718187827",
+      "context": {
+        "order_number": "<? @order_number.literal ?>"
+      },
+      "conditions": "@order_number",
+      "dialog_node": "node_7_1591718285778"
+    },
+    {
+      "type": "standard",
+      "title": "Cancelling the order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Ok. The order $order_number is canceled. We hope you shop with us sometime soon."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1591718285778",
+      "conditions": "#yes",
+      "dialog_node": "node_9_1591718785839"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good morning. Have a great day. I am Sam - the virtual assistant for Samsung Mobile Store. How may I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1591616757757",
+      "conditions": "@greetings:(Good morning)",
+      "dialog_node": "response_6_1591616826720",
+      "previous_sibling": "response_5_1591616795313"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good afternoon. Have a peaceful day. I am Sam - the virtual assistant for Samsung Mobile Store. How may I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1591616757757",
+      "conditions": "@greetings:(Good afternoon)",
+      "dialog_node": "response_3_1591616872424",
+      "previous_sibling": "response_6_1591616826720"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Good evening. I am Sam - the virtual assistant for Samsung Mobile Store. How may I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1591616757757",
+      "conditions": "@greetings:(Good evening)",
+      "dialog_node": "response_6_1591616947577",
+      "previous_sibling": "response_3_1591616872424"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello,  I am Sam - the virtual assistant for Samsung Mobile Store. How may I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_7_1591616757757",
+      "conditions": "@greetings:Hi",
+      "dialog_node": "response_5_1591616795313"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please provide your order number"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_8_1591717287762",
+      "event_name": "focus",
+      "dialog_node": "handler_4_1591717287847",
+      "previous_sibling": "handler_10_1591717287847"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_8_1591717287762",
+      "context": {
+        "order_number": "@order_number"
+      },
+      "conditions": "@order_number",
+      "event_name": "input",
+      "dialog_node": "handler_10_1591717287847"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Click on <a href=\"https://www.flipkart.com/search?sid=tyy%2C4io&otracker=CLP_Filters&p%5B%5D=facets.screen_size%255B%255D%3D5.7%2B-%2B5.9%2Binch&sort=price_asc&p%5B%5D=facets.screen_size%255B%255D%3D3%2B-%2B3.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5.5%2B-%2B5.6%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5.2%2B-%2B5.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5%2B-%2B5.1%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D4.5%2B-%2B4.9%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D4%2B-%2B4.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D3.5%2B-%2B3.9%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D6%2Binch%2B%2526%2Babove&p%5B%5D=facets.type%255B%255D%3DSmartphones&p%5B%5D=facets.brand%255B%255D%3DSamsung&p%5B%5D=facets.budget%255B%255D%3DRs.%2B10000%2Bto%2BRs.%2B14999&p%5B%5D=facets.budget%255B%255D%3DRs.%2B15000%2Bto%2BRs.%2B29999\">this link</a> to view the products. Happy shopping!!!"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1591621864840",
+      "conditions": "@price_range:Moderate",
+      "dialog_node": "response_3_1591621978006",
+      "previous_sibling": "response_1_1591621936098"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Click on <a href=\"https://www.flipkart.com/search?sid=tyy%2C4io&otracker=CLP_Filters&p%5B%5D=facets.screen_size%255B%255D%3D5.7%2B-%2B5.9%2Binch&sort=price_asc&p%5B%5D=facets.screen_size%255B%255D%3D3%2B-%2B3.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5.5%2B-%2B5.6%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5.2%2B-%2B5.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5%2B-%2B5.1%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D4.5%2B-%2B4.9%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D4%2B-%2B4.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D3.5%2B-%2B3.9%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D6%2Binch%2B%2526%2Babove&p%5B%5D=facets.type%255B%255D%3DSmartphones&p%5B%5D=facets.brand%255B%255D%3DSamsung&p%5B%5D=facets.budget%255B%255D%3DRs.%2B30000%2Band%2Babove\"> this link</a> to view the products. Happy shopping!!!"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "parent": "node_3_1591621864840",
+      "conditions": "@price_range:Expensive",
+      "dialog_node": "response_8_1591621997149",
+      "previous_sibling": "response_3_1591621978006"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Click on <a href=\"https://www.flipkart.com/search?sid=tyy%2C4io&otracker=CLP_Filters&p%5B%5D=facets.screen_size%255B%255D%3D5.7%2B-%2B5.9%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D3%2B-%2B3.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5.5%2B-%2B5.6%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5.2%2B-%2B5.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D5%2B-%2B5.1%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D4.5%2B-%2B4.9%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D4%2B-%2B4.4%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D3.5%2B-%2B3.9%2Binch&p%5B%5D=facets.screen_size%255B%255D%3D6%2Binch%2B%2526%2Babove&p%5B%5D=facets.type%255B%255D%3DSmartphones&p%5B%5D=facets.brand%255B%255D%3DSamsung&p%5B%5D=facets.budget%255B%255D%3DRs.%2B5000%2Bto%2BRs.%2B9999&p%5B%5D=facets.budget%255B%255D%3DRs.%2B5000%2Band%2Bbelow&sort=price_asc\">this link</a> to view the products. Happy shopping!!!"
+              },
+              {
+                "text": ""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1591621864840",
+      "conditions": "@price_range:Cheap",
+      "dialog_node": "response_1_1591621936098"
+    },
+    {
+      "type": "response_condition",
+      "parent": "node_4_1591627149390",
+      "conditions": "anything_else",
+      "dialog_node": "response_4_1591633271243",
+      "previous_sibling": "response_5_1591633266466"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "\"<?$webhook_result_1.passages[0].passage_text?>\""
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_4_1591627149390",
+      "conditions": "$webhook_result_1",
+      "dialog_node": "response_5_1591633266466"
+    },
+    {
+      "type": "standard",
+      "title": "Device information",
+      "actions": [
+        {
+          "name": "main_webhook",
+          "type": "webhook",
+          "parameters": {
+            "input": "<?input_text?>"
+          },
+          "result_variable": "webhook_result_1"
+        }
+      ],
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#device_info",
+      "dialog_node": "node_4_1591627149390",
+      "previous_sibling": "node_3_1591624467794"
+    },
+    {
+      "type": "standard",
+      "title": "Cancel an order with incorrect order format",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "The correct format for our order numbers is AAAnnnnnn. The A's represents 3 uppercase letters, and the n's represent 6 numbers. Please provide an order number in that format."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#cancel_an_order && input.text.find('\\d')",
+      "digress_in": "does_not_return",
+      "dialog_node": "node_5_1591718187827",
+      "previous_sibling": "node_2_1591621787064"
+    },
+    {
+      "type": "standard",
+      "title": "Place an order",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "What is your price range : Cheap, Moderate or Expensive?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#place_an_order",
+      "dialog_node": "node_2_1591621787064",
+      "previous_sibling": "node_4_1591617345374"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. You can try rephrasing."
+              },
+              {
+                "text": "Can you reword your statement? I'm not understanding."
+              },
+              {
+                "text": "I didn't get your meaning."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_2_1591768919381",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "frame",
+      "title": "Cancel an order with correct order format",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "If the delivery time is more than 48 hours from now, you can cancel your order. Do you wish to cancel your order $order_number ?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "order_number": "<? @order_number.literal ?>"
+      },
+      "conditions": "#cancel_an_order",
+      "dialog_node": "node_3_1591624467794",
+      "previous_sibling": "node_5_1591718187827"
+    },
+    {
+      "type": "standard",
+      "title": "Store information",
+      "output": {
+        "generic": [
+          {
+            "source": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTZpT9ZsVmoZeAuLtg4ed-82aVYGnG3OWvcFhE3jZRkle-5I5PM&usqp=CAU",
+            "response_type": "image"
+          },
+          {
+            "values": [
+              {
+                "text": "Samsung Electronics Co., Ltd. is a South Korean multinational electronics company headquartered in Suwon, South Korea. Samsung was founded by Lee Byung-chul in 1938 as a trading company. Samsung entered the electronics industry in the late 1960s. Since 1990, Samsung has increasingly globalized its activities and electronics; in particular, its mobile phones and semiconductors have become its most important source of income. Samsung is a leading seller of mobile phones, televisions, printers, speakers, cameras, LCD and LED panels, semiconductors, solid state drives, hard drives, etc. in about 80 countries around the world."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "multiline"
+          }
+        ]
+      },
+      "conditions": "#store_info",
+      "dialog_node": "node_4_1591617345374",
+      "previous_sibling": "node_7_1591616757757"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "@greetings",
+      "dialog_node": "node_7_1591616757757",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Goodbye",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "It was a great pleasure talking to you. Feel free to come back for any further queries. Goodbye!!!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#bye",
+      "dialog_node": "node_2_1591768919381",
+      "previous_sibling": "node_4_1591627149390"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hi, I am Sam - the virtual assistant for Samsung Mobile Store"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Samsung Mobile Store",
+  "language": "en",
+  "description": "A chatbot for Samsung mobile store that answers customer's queries."
+}
